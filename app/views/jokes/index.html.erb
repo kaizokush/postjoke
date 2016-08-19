@@ -28,7 +28,7 @@
         <small>by <%= joke.author %></small>
       </blockquote>
       <br>
-      <%= link_to 'Delete', idea_path(idea),method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %>%>
+      <%= link_to 'Delete', joke_path(joke),method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %>
     </div>
   </div>
 <% end %>

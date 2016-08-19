@@ -1,3 +1,3 @@
-class Joke < ApplicationRecord::ActiveRecord
+class Joke < ApplicationRecord
 	validates :jokes, :author, presence: true
 end
