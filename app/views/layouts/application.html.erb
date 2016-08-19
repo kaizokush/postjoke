@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
                     <li><%= link_to 'All Jokes',root_path%></li>
-          <li><%= link_to 'Tickle Me'%></li>
+          <li><% if @joke.present? %> <%= link_to 'Tickle Me', random_path, class: 'btn btn-primary btn-block' %></li>
           <li><%= link_to 'About',about_path%></li>
         </ul>
       </div><!-- /.navbar-collapse -->

@@ -23,6 +23,9 @@ end
   		@joke.destroy
   		redirect_to root_path
 	end
+	def random
+  @joke = Joke.order("RANDOM()").first
+end
 	
 	private
 	def joke_params
