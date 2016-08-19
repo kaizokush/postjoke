@@ -1,1 +1,4 @@
-<h1> This is a demo app of PostJOKES!</h1>
+<% @jokes.each do |joke| %>
+  <h3><%= joke.jokes %></h3>
+  <h4><%= joke.author %></h4>
+<% end %>
