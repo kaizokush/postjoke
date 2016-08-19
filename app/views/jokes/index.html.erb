@@ -1,4 +1,15 @@
+<%= simple_form_for Joke.new do |f| %>
+  <%= f.input :jokes %>
+  <%= f.input :author %>
+  <%= f.submit 'Submit',class: 'btn btn-primary' %>
+<% end %>
 <% @jokes.each do |joke| %>
-  <h3><%= joke.jokes %></h3>
-  <h4><%= joke.author %></h4>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <blockquote>
+  <p><%= joke.jokes %></p>
+  <small><%= joke.author %></small>
+  </blockquote>
+  </div>
+  </div>
 <% end %>
