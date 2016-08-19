@@ -11,11 +11,16 @@ class JokesController < ApplicationController
 		params.require(:joke).permit(:jokes,:author)
 	end
 	def update
-  @joke = Joke.find(params[:id])
-  if @joke.update(joke_params)
+ 	 @joke = Joke.find(params[:id])
+  	if @joke.update(joke_params)
     redirect_to root_path
-  else
+  	else
     redirect_to edit_joke_path(params[:id])
-  end
-end
+  	end
+	end
+	def destroy
+  		@joke = Joke.find(params[:id])
+  		@joke.destroy
+  		redirect_to root_path
+	end
 end

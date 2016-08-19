@@ -20,6 +20,18 @@
     </div>
   </div>
 </div>
+<% @jokes.each do |joke| %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <blockquote>
+        <p><%= joke.jokes %></p>
+        <small>by <%= joke.author %></small>
+      </blockquote>
+      <br>
+      <%= link_to 'Delete', idea_path(idea),method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %>%>
+    </div>
+  </div>
+<% end %>
 
 <% @jokes.each do |joke| %>
   <div class="panel panel-default">
