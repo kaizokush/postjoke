@@ -1,8 +1,26 @@
-<%= simple_form_for Joke.new do |f| %>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Add a Joke
+</button>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Joke title</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for Joke.new do |f| %>
   <%= f.input :jokes %>
   <%= f.input :author %>
   <%= f.submit 'Submit',class: 'btn btn-primary' %>
 <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% @jokes.each do |joke| %>
   <div class="panel panel-default">
     <div class="panel-body">
