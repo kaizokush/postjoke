@@ -1,0 +1,8 @@
+
+<h1>Edit Joke</h1>
+
+<%= simple_form_for @joke, method: :patch do |f| %>
+<%= f.input :jokes %>
+  <%= f.input :author %>
+  <%= f.submit 'Submit', class: 'btn btn-primary' %>
+<% end %>
