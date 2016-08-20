@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate', '~> 3.1.0'
 gem 'simple_form'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass', '~> 3.3.6'

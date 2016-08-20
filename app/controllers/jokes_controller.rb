@@ -1,6 +1,6 @@
 class JokesController < ApplicationController
 	def index
-		@jokes=Joke.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)		
+		@jokes=Joke.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)		
 	end
 	def edit
   @joke = Joke.find(params[:id])
