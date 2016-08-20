@@ -6,6 +6,6 @@ class StaticPagesController < ApplicationController
   end
 
   def random
-
+  		@joke = Joke.order("RANDOM()").first
   end
 end
