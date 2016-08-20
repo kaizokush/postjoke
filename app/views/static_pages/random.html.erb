@@ -1,10 +1,10 @@
 <% if @joke.present? %>
-  <%= link_to 'Tickle', random_path, class: 'btn btn-primary btn-block' %>
+  <%= link_to 'Tickle', random_path, class: 'btn btn-primary btn-block', style: "height: 30px; width: 100px;margin:0 auto" %></br>
     
   <div class="panel panel-default">
     <div class="panel-body">
       <blockquote>
-        <p><%= @joke.jokes %></p>
+        <p><%= simple_format @joke.jokes %></p>
         <small>by <%= @joke.author %></small>
       </blockquote>
         
@@ -16,7 +16,4 @@
       </div>
     </div>
   </div>
-  
-  <h4>No jokes have been shared. Add one <%= link_to 'here', root_path %></h4>
-
-<% end %>
+ <% end %>

@@ -1,8 +1,10 @@
 .navbar-brand {
-  font-family: 'Indie Flower'
+  font-family: 'Indie Flower';
+  font-weight:bold;
 }
 .navbar-default{
-	background-color: white;	
+	background-color: white;
+  height:70px;	
 }
 .navbar-default .navbar-brand{
 	font-size:40px;
@@ -11,6 +13,14 @@ html,
 body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
+}
+
+.about{
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin:0 auto;
+  width:600px;
+  padding:10px;
 }
 
 /* Wrapper for page content to push down footer */
