@@ -1,7 +1,7 @@
 <% if @joke.present? %>
-  <%= link_to 'Tickle', random_path, class: 'btn btn-primary btn-block', style: "height: 30px; width: 100px;margin:0 auto" %></br>
+  <%= link_to 'Tickle', random_path, class: 'btn btn-primary btn-block', style: "height: 30px; width: 100px;margin:0 auto",'data-no-turbolink' => true %></br>
     
-  <div class="panel panel-default">
+  <div class="panel panel-default" data-no-turbolink>
     <div class="panel-body">
       <blockquote>
         <p><%= simple_format @joke.jokes %></p>
@@ -16,4 +16,4 @@
       </div>-->
     </div>
   </div>
- <% end %>
+ <% end %>  

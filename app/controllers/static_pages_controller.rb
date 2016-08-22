@@ -1,6 +1,4 @@
 class StaticPagesController < ApplicationController
-end
-class StaticPagesController < ApplicationController
   def about
 
   end

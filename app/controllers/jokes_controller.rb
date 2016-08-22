@@ -2,9 +2,10 @@ class JokesController < ApplicationController
 	def index
 		@jokes=Joke.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)		
 	end
+	
 	def edit
-  @joke = Joke.find(params[:id])
-end
+ 	 @joke = Joke.find(params[:id])
+	end
 	def create
 		@joke=Joke.create(joke_params)
 		redirect_to root_path
@@ -24,8 +25,9 @@ end
   		redirect_to root_path
 	end
 	def random
-  @joke = Joke.order("RANDOM()").first
-end
+ 	 @joke = Joke.order("RANDOM()").first
+
+	end
 	
 	private
 	def joke_params

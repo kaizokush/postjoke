@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+ruby "2.2.3"
+
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'will_paginate', '~> 3.1.0'
 gem 'simple_form'
 gem 'font-awesome-sass'
